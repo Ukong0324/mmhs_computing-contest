@@ -37,7 +37,12 @@ request(`http://ncov.mohw.go.kr/`, function (error, response, body) {
     let totalCheck = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveToggleOuter > div > div.live_left > div.liveTest.main_box_toggle > div.info_core > ul > li:nth-child(1) > span.num").text().replace("건", "").replace(" ", "")
     let totalChecked = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveToggleOuter > div > div.live_left > div.liveTest.main_box_toggle > div.info_core > ul > li:nth-child(2) > span.num").text().replace("건", "").replace(" ", "")
     let percent = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveToggleOuter > div > div.live_left > div.liveTest.main_box_toggle > div.info_core > ul > li:nth-child(3) > span.num").text().replace(" %", "")
+
     try {
+      db.collection('coronas').findOne({ _id: "korea" }, async (err, res) => {
+        const week = res.korea.week
+        week.shift()
+        week.push(today)
         db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
             $set: {
                 korea: {
@@ -54,12 +59,54 @@ request(`http://ncov.mohw.go.kr/`, function (error, response, body) {
                     totalCheck: totalCheck,
                     totalChecked: totalChecked,
                     average: percent,
+                    week: week,
                     updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
                 }
             }
         }).then(() => {
             console.log(chalk.cyan(chalk.bold("[ DATABASE ] ")) + `Updated patient datas`)
+            const line_chart = ChartJSImage().chart({
+              "type": "line",
+              "data": {
+                "labels": [
+                  moment(Date.now() - 604800000).format("MM.DD"),
+                  moment(Date.now() - 518400000).format("MM.DD"),
+                  moment(Date.now() - 432000000).format("MM.DD"),
+                  moment(Date.now() - 345600000).format("MM.DD"),
+                  moment(Date.now() - 259200000).format("MM.DD"),
+                  moment(Date.now() - 172800000).format("MM.DD"),
+                  moment(Date.now() - 86400000).format("MM.DD"),
+                ],
+                "datasets": [
+                  {
+                    "label": "확진자수",
+                    "borderColor": "rgb(255,+99,+132)",
+                    "backgroundColor": "rgba(255,+99,+132,+.5)",
+                    "data": [
+                      week[0],
+                      week[1],
+                      week[2],
+                      week[3],
+                      week[4],
+                      week[5],
+                      week[6]
+                    ]
+                  }
+                ]},
+              "options": {
+                "title": {
+                  "display": true,
+                  "text": "코로나19 일별 신규 확진자수"
+                }
+              }
+            })
+            .backgroundColor('white')
+            .width(700)
+            .height(450);
+             
+          line_chart.toFile('./example/covid-19.png');
         })
+      })
 
     } catch (e) {
         console.log(e)
