@@ -8,10 +8,11 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chalk": "^4.1.1",
     "chart.js-image": "^5.6.0",
     "cheerio": "^1.0.0-rc.9",
-    "chalk": "^4.1.1",
     "express": "^4.17.1",
+    "luxon": "^1.27.0",
     "mongoose": "^5.12.11",
     "node-cron": "^3.0.0",
     "node-schedule": "^2.0.0",
