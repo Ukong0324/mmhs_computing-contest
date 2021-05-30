@@ -13,8 +13,8 @@
     "cheerio": "^1.0.0-rc.9",
     "express": "^4.17.1",
     "luxon": "^1.27.0",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.11",
-    "node-cron": "^3.0.0",
     "node-schedule": "^2.0.0",
     "request": "^2.88.2"
   },
