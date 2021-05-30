@@ -411,5 +411,3 @@ const covid = schedule.scheduleJob('00 00 10 * * *', function () {
 
   console.log(chalk.cyan(chalk.bold("[ DATABASE ] ")) + `Updated covid-19 datas`)
 });
-
-koreaUpdate()
