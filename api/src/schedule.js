@@ -19,20 +19,20 @@ function koreaUpdate() {
     const $ = cheerio.load(body);
 
     let total = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(1) > span.num").text().replace("(누적)", "")
-    let today = Number($("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(1) > span.before").text().replace("전일대비 (+ ", "").replace(")", "")).toLocaleString()
+    let today = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(1) > span.before").text().replace("전일대비 (+ ", "").replace(")", "").toLocaleString()
 
     let domestic = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum_today_new > div > ul > li:nth-child(1) > span.data").text()
     let foreign = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum_today_new > div > ul > li:nth-child(2) > span.data").text()
 
     let recover = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(2) > span.num").text()
-    let todayRecover = Number($("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(2) > span.before").text().replace("(+ ", "").replace(")", "")).toLocaleString()
+    let todayRecover = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(2) > span.before").text().replace("(+ ", "").replace(")", "").toLocaleString()
 
     let care = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(3) > span.num").text()
-    let todayCare = Number($("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(3) > span.before").text().replace("(+ ", "").replace(")", "")).toLocaleString()
+    let todayCare = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(3) > span.before").text().replace("(+ ", "").replace(")", "").replace("(", "").replace(" ", "").toLocaleString()
 
 
     let death = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.num").text()
-    let todayDeath = Number($("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.before").text().replace("(+ ", "").replace(")", "")).toLocaleString()
+    let todayDeath = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.before").text().replace("(+ ", "").replace(")", "").toLocaleString()
 
     let totalCheck = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveToggleOuter > div > div.live_left > div.liveTest.main_box_toggle > div.info_core > ul > li:nth-child(1) > span.num").text().replace("건", "").replace(" ", "")
     let totalChecked = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveToggleOuter > div > div.live_left > div.liveTest.main_box_toggle > div.info_core > ul > li:nth-child(2) > span.num").text().replace("건", "").replace(" ", "")
@@ -411,3 +411,5 @@ const covid = schedule.scheduleJob('00 00 10 * * *', function () {
 
   console.log(chalk.cyan(chalk.bold("[ DATABASE ] ")) + `Updated covid-19 datas`)
 });
+
+koreaUpdate()
