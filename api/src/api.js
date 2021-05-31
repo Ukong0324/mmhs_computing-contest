@@ -3,7 +3,16 @@ const chalk = require("chalk");
 const mongoose = require("mongoose");
 const api = require("./routes/api.js");
 const app = express();
+const https = require("https");
+const fs = require("fs");
+const path = require("path");
 const settings = require("../settings.js");
+
+
+const sslServer = https.createServer({
+    key: fs.readFileSync(path.join(__dirname, 'ssl', '../../ssl/server.key')),
+    cert: fs.readFileSync(path.join(__dirname, 'ssl', '../../ssl/server.crt'))
+}, app)
 
 app.get("/", (req, res) => {
     res.redirect("https://github.com/Ukong0324/mmhs_computing-contest")
@@ -21,6 +30,6 @@ mongoose.connect(settings.config.mongo.url, {
     console.log(chalk.cyan(chalk.bold("[ DATABASE ] ")) + chalk.bold(`Connected the databases | ${res.connections[0].host + ":" + res.connections[0].port} | Mongo Version ${version}`));
 });
 
-app.listen(settings.config.port, () => {
-    console.log(chalk.green(chalk.bold("[ SERVER ] ")) + chalk.bold(`Server running on this url: http://localhost:${settings.config.port}`));
+sslServer.listen(settings.config.port, () => {
+    console.log(chalk.green(chalk.bold("[ SERVER ] ")) + chalk.bold(`Server running on this url: https://localhost:${settings.config.port}`));
 })
