@@ -2,16 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const chalk = require("chalk");
 const mongoose = require("mongoose");
-
+const api = require("./routes/api.js");
 const app = express();
-const settings = require("./settings.js");
+const settings = require("../settings.js");
 
 app.get("/", (req, res) => {
-    res.send({
-        "message": "ok",
-        "status": res.statusCode
-    })
+    res.redirect("https://github.com/Ukong0324/mmhs_computing-contest")
 })
+
+app.use("/api", api);
 
 mongoose.connect(settings.config.mongo.url, { 
     useNewUrlParser: true,
