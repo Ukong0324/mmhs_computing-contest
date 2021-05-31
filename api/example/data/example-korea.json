@@ -1,0 +1,22 @@
+{
+    "total":"140,340",
+    "today": "430",    
+    "domestic": "411",
+    "foreign": "19",
+    "recover": "130,823",
+    "todayRecover": "442",
+    "care": "7,558",
+    "todayCare": "-14",
+    "death": "1,959",
+    "todayDeath": "2",
+    "totalCheck": "9,761,158",
+    "totalChecked": "9,633,205",
+    "average": "1.5",
+    "week": [
+      "516", "706",
+      "629", "587",
+      "533", "480",
+      "430"
+    ],
+    "updated": "2021.05.31 AM 10.00.00"
+  }
