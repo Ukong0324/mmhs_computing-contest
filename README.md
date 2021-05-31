@@ -19,7 +19,7 @@
 * 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
 
 ### 1. 요청 방법 (GET) 
-* **Nothing**
+* https://corona-api.xyz/api/korea
 
 
 ### 2. 응답 내용 (Output)
@@ -51,7 +51,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 * 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
 
 ### 1. 요청 방법 (GET)
-* **Nothing**
+* https://corona-api.xyz/api/age
 
 ### 2. 응답 내용 (Output)
 
@@ -80,7 +80,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 * 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
 
 ### 1. 요청 방법 (GET)
-* **Nothing**
+* https://corona-api.xyz/api/dead
 
 ### 2. 응답 내용 (Output)
 
@@ -109,7 +109,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 * 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
 
 ### 1. 요청 방법 (GET)
-* **Nothing**
+* https://corona-api.xyz/api/age_critical
 
 ### 2. 응답 내용 (Output)
 
@@ -138,7 +138,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 * 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
 
 ### 1. 요청 방법 (GET)
-* **Nothing**
+* https://corona-api.xyz/api/gender
 
 ### 2. 응답 내용 (Output)
 
