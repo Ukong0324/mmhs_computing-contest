@@ -3,3 +3,4 @@
 # no .a files
 api/node_modules/*
 api/package-lock.json
+api/settings.js
