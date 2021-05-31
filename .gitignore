@@ -4,3 +4,5 @@
 api/node_modules/*
 api/package-lock.json
 api/settings.js
+api/ssl/server.crt
+api/ssl/server.key
