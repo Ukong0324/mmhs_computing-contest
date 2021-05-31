@@ -23,5 +23,5 @@ mongoose.connect(settings.config.mongo.url, {
 });
 
 app.listen(settings.config.port, () => {
-    console.log(chalk.green(chalk.bold("[ SERVER ] ")) + chalk.bold(`Server running on port: http://localhost:${settings.config.port}`));
+    console.log(chalk.green(chalk.bold("[ SERVER ] ")) + chalk.bold(`Server running on this url: http://localhost:${settings.config.port}`));
 })
