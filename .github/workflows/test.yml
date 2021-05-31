@@ -13,6 +13,6 @@ jobs:
     steps:
     
     - name: code test
-      run: npm test
+      run: ls
       
     
