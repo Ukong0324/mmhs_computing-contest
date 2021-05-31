@@ -38,7 +38,7 @@ totalChecked | 누적 검사 완료 수 | 총 코로나 테스트가 완료된 �
 percent | 누적 확진율 | 결과 양성 / 총 검사 완료 수 * 100% | 1.5
 updated | 업데이트 날짜 | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 10.00.00  
   
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [covid19-korea](https://github.com/Ukong0324/corona-api-docs/blob/main/example-patient.json)를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [covid19-korea](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-korea.json)를 확인하여 제공 방식을 참고하십시요.
 
 ## 2. 코로나19 연령별 확진 현황  
 
@@ -67,4 +67,8 @@ eighty | 80+ | 80대 이상 확진자 수 | 5,722
 updated | 업데이트 날짜 | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 10.00.00
 
 
+<<<<<<< Updated upstream
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [age-data](https://github.com/Ukong0324/corona-api-docs/blob/main/example-patient.json)를 확인하여 제공 방식을 참고하십시요.
+=======
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [age-data](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age.json)를 확인하여 제공 방식을 참고하십시요.
+>>>>>>> Stashed changes
