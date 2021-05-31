@@ -416,7 +416,7 @@ function vacc_update() {
 
 
 }
-const covid = schedule.scheduleJob('00 00 10 * * *', function () {
+const covid = schedule.scheduleJob('00 45 9 * * *', function () {
   koreaUpdate()
   ageUpdate()
   age_dead_Update()
