@@ -6,6 +6,8 @@ const mongoose = require("mongoose")
 const chalk = require('chalk')
 const moment = require("moment")
 const ChartJSImage = require('chart.js-image')
+const axios = require("axios")
+const webhook = require("webhook-discord")
 
 mongoose.connect(settings.config.mongo.url, { useNewUrlParser: true, useUnifiedTopology: true }).then((res) => {
   const version = res.connections[0]._connectionOptions.driverInfo.version
@@ -273,7 +275,7 @@ function age_dead_Update() {
           .backgroundColor('white')
           .width(700)
           .height(450);
-  
+
         line_chart.toFile('../example/age_dead.png');
       })
     } catch (e) {
@@ -357,10 +359,10 @@ function age_critical_Update() {
           .backgroundColor('white')
           .width(700)
           .height(450);
-  
+
         line_chart.toFile('../example/age_critical.png');
       })
-      
+
     } catch (e) {
       console.log(e)
     }
@@ -401,6 +403,19 @@ function gender_Update() {
   })
 }
 
+function vacc_update() {
+  /**
+   * API가 3/11 이후 업데이트가 되지 않음.
+   */
+
+  const url = "https://api.odcloud.kr/api/15077756/v1/vaccine-stat?page=1&perPage=18&serviceKey=c7nbv8fpGec8d5xstCR5HqJpSIgpuzaxPM7sLvBYAZopDBsadBnG%2FdW%2F7zmywZcgmCNYaxtxMEvh97Ci7vueGw%3D%3D"
+  axios.get(url).then((res) => {
+    const data = res.data
+    console.log(data)
+  })
+
+
+}
 const covid = schedule.scheduleJob('00 00 10 * * *', function () {
   koreaUpdate()
   ageUpdate()
@@ -410,4 +425,15 @@ const covid = schedule.scheduleJob('00 00 10 * * *', function () {
   gender_Update()
 
   console.log(chalk.cyan(chalk.bold("[ DATABASE ] ")) + `Updated covid-19 datas`)
+
+  const Hook = new webhook.Webhook("https://discord.com/api/webhooks/848770957069778944/0i2x5FkiU1biiZYSi0cHNnR4FPIHxA-0tLlOjh_NjpjbCSzEveBU8wKQWPreKI-af2t0")
+
+  const msg = new webhook.MessageBuilder()
+    .setName("Corona API Update")
+    .setDescription(`**코로나19** 데이터가 업데이트 되었습니다.`)
+    .setColor("#5DFA25")
+
+  Hook.send(msg).catch((err) => {
+    console.log(err)
+  })
 });
