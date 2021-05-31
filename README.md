@@ -1,4 +1,6 @@
-# 2021 창의컴퓨팅대회
+
+
+# 2021 창의컴퓨팅대회 [![CodeFactor](https://www.codefactor.io/repository/github/ukong0324/mmhs_computing-contest/badge/main?s=b81aee30e8f0e4732773fd18b7f76a5e4ae450b4)](https://www.codefactor.io/repository/github/ukong0324/mmhs_computing-contest/overview/main)
 > COVID-19가 끝나는 그날까지.
 
 ## API 소개
