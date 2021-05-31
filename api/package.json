@@ -22,7 +22,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "run": "node ./src/api.js"
+    "test": "node ./src/api.js"
   },
   "keywords": [],
   "author": "Choi You Bin (Jasper)",
