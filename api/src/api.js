@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const chalk = require("chalk");
 const mongoose = require("mongoose");
 const api = require("./routes/api.js");
