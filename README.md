@@ -40,7 +40,7 @@ totalChecked | 코로나 테스트가 완료된 수 | 9,633,205
 percent | 결과 양성 / 총 검사 완료 수 * 100% | 1.5
 updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00  
   
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-korea](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-korea.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-korea](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-korea.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 ## 2. 코로나19 연령별 확진 현황  
 
@@ -68,7 +68,7 @@ seventy | 70대 확진자 수 | 9,784
 eighty | 80대 이상 확진자 수 | 5,722
 updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 
 ## 3. 코로나19 연령별 사망자 현황  
@@ -97,7 +97,7 @@ seventy | 70대 사망자 수 | 552
 eighty | 80대 이상 사망자 수 | 1,081
 updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age_dead](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age_dead.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age_dead](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age_dead.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 
 ## 4. 코로나19 연령별 치명률 현황  
@@ -127,7 +127,7 @@ eighty | 80대 이상 치명률 | 18.89
 updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age_critical](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age_critical.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age_critical](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age_critical.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 
 ## 5. 코로나19 성별 코로나 현황  
@@ -176,7 +176,7 @@ second_today_result | 2회차 접종 당일 실적 | 8,127
 second_today_total | 2회차 접종 당일 누계 | 333,469
 updated | 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
-> [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-vaccine.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-vaccine.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 ## 7. 코로나19 시도별 사회적 거리두기
 
@@ -215,4 +215,4 @@ jeju | 제주 | 2
 updated | 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시오.
