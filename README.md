@@ -126,6 +126,7 @@ seventy | 70대 치명률 | 5.64
 eighty | 80대 이상 치명률 | 18.89
 updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
+
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age_critical](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age_critical.json) 데이터를 확인하여 제공 방식을 참고하십시요.
 
 
@@ -142,7 +143,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
 ### 2. 응답 내용 (Output)
 
-항목명(영어) | 항목명(한글) | 데이터 (예시)
+항목명(영어) | 비고 | 데이터 (예시)
 ------- | -------- | --------
 man_total | 남성 확진자 수  | 70,002
 women_total | 여성 확진자 수  | 69,908 
@@ -152,4 +153,66 @@ man_critical | 남성 치명률  | 1.39
 women_critical | 여성 치명률  | 1.41
 updated | 업데이트 날짜  | 2021.05.31 AM 09.45.00
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-gender](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-gender.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+## 6. 코로나19 시도별 백신 접종 현황
+
++ 제공하는 데이터는 아래와 같습니다.   
+    +  당일 전국 누적, 실적 데이터
+
+* 데이터 정보 출처: [KDCA]](https://ncv.kdca.go.kr/)   
+* 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
+
+### 1. 요청 방법 (GET)
+* https://corona-api.xyz/api/vaccine
+
+### 2. 응답 내용 (Output)
+
+- 아래의 예시 응답 내용의 데이터는 서울 입니다.
+
+항목명(영어) | 비고 | 데이터 (예시)
+------- | -------- | --------
+first_today_result | 1회차 접종 당일 실적 | 75,387
+first_today_total | 1회차 접종 당일 누계 | 988,327
+second_today_result | 2회차 접종 당일 실적 | 8,127
+second_today_total | 2회차 접종 당일 누계 | 333,469
+updated | 업데이트 날짜 | 2021.05.31 AM 09.45.00
+
+> [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-vaccine.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+
+## 7. 코로나19 시도별 사회적 거리두기
+
++ 제공하는 데이터는 아래와 같습니다.   
+    + 시도별 사회적 거리두기 단계 데이터
+
+* 데이터 정보 출처: [MOHW](http://ncov.mohw.go.kr/)  
+* 제공하는 데이터들은 오전 9시 45분에 자동 업데이트 됩니다.
+
+### 1. 요청 방법 (GET)
+* https://corona-api.xyz/api/social_distancing
+
+### 2. 응답 내용 (Output)
+
+- 아래의 예시 응답 내용의 데이터는 서울 입니다.
+
+항목명(영어) | 비고 | 데이터 (예시)
+------- | -------- | --------
+seoul | 서울 | 2
+busan | 부산 | 1.5
+daegu | 대전 | 1.5
+incheon | 인천 | 2
+gwangju | 광주| 1.5
+daejeon | 대전 | 1.5
+ulsan | 울산 | 2
+sejong | 세종 | 1.5
+gyeonggi | 경기 | 2
+gangwon | 강원 | 1.5
+chungbuk | 충북 | 1.5
+chungnam | 충남 | 1.5
+jeollabuk | 전북 | 1.5
+jeollanam | 전남 | 1
+gyeongbuk | 경북 | 1.5
+gyeongnam | 경남 | 1.5
+jeju | 제주 | 2
+updated | 업데이트 날짜 | 2021.05.31 AM 09.45.00
+
+
+> [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시요.
