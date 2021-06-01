@@ -8,7 +8,7 @@
 **현 API는 코로나19 관련 정보들을 제공해드리고 있습니다.**
 
 * NO API KEY
-* 정부에서 제공하는 데이터들을 제공 **[ [MOHW](http://ncov.mohw.go.kr/), [KDCA](https://ncv.kdca.go.kr/) ]**
+* [질병관리청](http://www.kdca.go.kr/)의 데이터들을 제공함
 
 ## 1. 국내 코로나 현황
 
