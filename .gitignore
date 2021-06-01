@@ -6,3 +6,4 @@ api/package-lock.json
 api/settings.js
 api/ssl/server.crt
 api/ssl/server.key
+api/src/test.js
