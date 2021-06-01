@@ -215,4 +215,4 @@ jeju | 제주 | 2
 updated | 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
 
-> [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시요.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시요.
