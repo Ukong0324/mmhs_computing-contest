@@ -437,3 +437,36 @@ const covid = schedule.scheduleJob('00 45 9 * * *', function () {
     console.log(err)
   })
 });
+
+/**
+ * 백신현황
+ */
+
+// axios.get("https://ncv.kdca.go.kr/mainStatus.es?mid=a11702000000").then((res) => {
+//     const $ = cheerio.load(res.data);
+//     let first_today_stack = $("#wrap > div.container > div:nth-child(1) > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(2)").text()
+//     let second_today_stack = $("#wrap > div.container > div:nth-child(1) > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(3)").text()
+
+
+//     let seoul = $("#wrap > div.container > div:nth-child(1) > div:nth-child(5) > table > tbody > tr:nth-child(2) > td:nth-child(2)").text()
+
+// })
+
+/**
+ * 사회적 거리두기 
+ */
+
+// axios.get("http://ncov.mohw.go.kr/").then((res) => {
+//     const $ = cheerio.load(res.data);
+//     let seoul = $("#main_maplayout > button:nth-child(1) > span.num").text()
+//     seoul.slice(2)
+
+//     function check_space(anything) {
+//         let slice = anything.slice(0, 3)
+//         if (slice[1] === ".") {
+//             return (Number(slice) - 0.5).toLocaleString()
+//         } else {
+//             return (Number(slice[0]) - 0.5).toLocaleString()
+//         }
+//     }
+// })
