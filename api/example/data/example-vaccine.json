@@ -1,0 +1,105 @@
+{
+    "seoul": {
+        "first_today_result": "75,387",
+        "first_today_total": "988,327",
+        "second_today_result": "8,127",
+        "second_today_total": "333,469"
+    },
+    "busan": {
+        "first_today_result": "30,971",
+        "first_today_total": "394,156",
+        "second_today_result": "1,190",
+        "second_today_total": "129,209"
+    },
+    "daegu": {
+        "first_today_result": "13,922",
+        "first_today_total": "235,323",
+        "second_today_result": "1,171",
+        "second_today_total": "96,838"
+    },
+    "incheon": {
+        "first_today_result": "18,567",
+        "first_today_total": "285,770",
+        "second_today_result": "716",
+        "second_today_total": "102,733"
+    },
+    "gwangju": {
+        "first_today_result": "10,646",
+        "first_today_total": "177,823",
+        "second_today_result": "1,355",
+        "second_today_total": "68,397"
+    },
+    "daejeon": {
+        "first_today_result": "11,060",
+        "first_today_total": "158,894",
+        "second_today_result": "1,032",
+        "second_today_total": "59,801"
+    },
+    "ulsan": {
+        "first_today_result": "7,085",
+        "first_today_total": "99,191",
+        "second_today_result": "192",
+        "second_today_total": "36,125"
+    },
+    "sejong": {
+        "first_today_result": "1,496",
+        "first_today_total": "29,219",
+        "second_today_result": "30",
+        "second_today_total": "10,475"
+    },
+    "gyeonggi": {
+        "first_today_result": "80,234",
+        "first_today_total": "1,277,199",
+        "second_today_result": "4,896",
+        "second_today_total": "462,770"
+    },
+    "gangwon": {
+        "first_today_result": "12,750",
+        "first_today_total": "226,032",
+        "second_today_result": "823",
+        "second_today_total": "79,992"
+    },
+    "chungbuk": {
+        "first_today_result": "14,424",
+        "first_today_total": "213,565",
+        "second_today_result": "538",
+        "second_today_total": "80,976"
+    },
+    "chungnam": {
+        "first_today_result": "18,800",
+        "first_today_total": "278,359",
+        "second_today_result": "921",
+        "second_today_total": "110,843"
+    },
+    "jeollabuk": {
+        "first_today_result": "19,924",
+        "first_today_total": "288,914",
+        "second_today_result": "1,380",
+        "second_today_total": "114,598"
+    },
+    "jeollanam": {
+        "first_today_result": "19,012",
+        "first_today_total": "330,123",
+        "second_today_result": "3,076",
+        "second_today_total": "143,522"
+    },
+    "gyeongbuk": {
+        "first_today_result": "22,411",
+        "first_today_total": "337,677",
+        "second_today_result": "775",
+        "second_today_total": "152,154"
+    },
+    "gyeongnam": {
+        "first_today_result": "23,608",
+        "first_today_total": "397,767",
+        "second_today_result": "692",
+        "second_today_total": "162,458"
+    },
+    "jeju": {
+        "first_today_result": "5,238",
+        "first_today_total": "73,164",
+        "second_today_result": "150",
+        "second_today_total": "26,976"
+    },
+    "updated": "2021.06.01 PM 05.13.46"
+}
