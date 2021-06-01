@@ -144,12 +144,12 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.45.00
 
 항목명(영어) | 항목명(한글) | 데이터 (예시)
 ------- | -------- | --------
-man_total | 남성 확진자 수  | 0
-women_total | 여성 확진자 수  | 0
-man_dead | 남성 사망자 수 | 0.01
-women_dead | 여성 사망자 수 | 0.04
-man_critical | 남성 치명률  | 0.07
-women_critical | 여성 치명률  | 0.27
+man_total | 남성 확진자 수  | 70,002
+women_total | 여성 확진자 수  | 69,908 
+man_dead | 남성 사망자 수 | 970
+women_dead | 여성 사망자 수 | 987
+man_critical | 남성 치명률  | 1.39
+women_critical | 여성 치명률  | 1.41
 updated | 업데이트 날짜  | 2021.05.31 AM 09.45.00
 
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-gender](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-gender.json) 데이터를 확인하여 제공 방식을 참고하십시요.
