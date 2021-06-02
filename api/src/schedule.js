@@ -60,7 +60,7 @@ function koreaUpdate() {
               todayDeath: todayDeath,
               totalCheck: totalCheck,
               totalChecked: totalChecked,
-              average: percent,
+              percent: percent,
               week: week,
               updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
             }
@@ -689,7 +689,7 @@ function social_distancing_Update() {
     })
 })
 }
-const covid = schedule.scheduleJob('00 45 9 * * *', function () {
+const covid = schedule.scheduleJob('00 50 9 * * *', function () {
   koreaUpdate()
   ageUpdate()
   age_dead_Update()
@@ -705,7 +705,7 @@ const covid = schedule.scheduleJob('00 45 9 * * *', function () {
   const msg = new webhook.MessageBuilder()
     .setName("Corona API Update")
     .setDescription(`**코로나19** 데이터가 업데이트 되었습니다.`)
-    .setColor("#5DFA25")
+    .setColor("#5DFA25") 
 
   Hook.send(msg).catch((err) => {
     console.log(err)
