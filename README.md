@@ -1,6 +1,7 @@
 -------------------------------------
 ## **Introducing**
-> Until the COVID-19 is over.
+> 코로나가 끝나는 날까지   
+
 코로나19 관련 대한민국 [질병관리청](https://kdca.go.kr/)에서 제공하는 모든 데이터들을 제공합니다.
 
 ## **Requirements**
