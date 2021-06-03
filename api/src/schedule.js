@@ -1,7 +1,6 @@
 const schedule = require('node-schedule');
 const settings = require("../settings.js")
 const cheerio = require('cheerio');
-const request = require('request');
 const mongoose = require("mongoose")
 const chalk = require('chalk')
 const moment = require("moment")
@@ -17,8 +16,8 @@ mongoose.connect(settings.config.mongo.url, { useNewUrlParser: true, useUnifiedT
 const db = require('mongoose').connection
 
 function koreaUpdate() {
-  request(`http://ncov.mohw.go.kr/`, function (error, response, body) {
-    const $ = cheerio.load(body);
+  axios.get("http://ncov.mohw.go.kr/").then((res) => {
+    const $ = cheerio.load(res.data);
 
     let total = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(1) > span.num").text().replace("(누적)", "")
     let today = $("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(1) > span.before").text().replace("전일대비 (+ ", "").replace(")", "").toLocaleString()
@@ -118,8 +117,8 @@ function koreaUpdate() {
 }
 
 function ageUpdate() {
-  request(`http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=`, function (error, response, body) {
-    const $ = cheerio.load(body);
+  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
+    const $ = cheerio.load(res.data);
 
     let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(2) > span:nth-child(1)").text()
     let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1)").text()
@@ -203,8 +202,8 @@ function ageUpdate() {
 }
 
 function age_dead_Update() {
-  request(`http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=`, function (error, response, body) {
-    const $ = cheerio.load(body);
+  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
+    const $ = cheerio.load(res.data);
 
     let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(3) > span:nth-child(1)").text()
     let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(3) > span:nth-child(1)").text()
@@ -287,8 +286,8 @@ function age_dead_Update() {
 }
 
 function age_critical_Update() {
-  request(`http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=`, function (error, response, body) {
-    const $ = cheerio.load(body);
+  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
+    const $ = cheerio.load(res.data);
 
     let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
     let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
@@ -371,8 +370,8 @@ function age_critical_Update() {
 }
 
 function gender_Update() {
-  request(`http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=`, function (error, response, body) {
-    const $ = cheerio.load(body);
+  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
+    const $ = cheerio.load(res.data);
 
     let man_total = $("#content > div > div:nth-child(22) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span:nth-child(1)").text()
     let women_total = $("#content > div > div:nth-child(22) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span:nth-child(1)").text()
