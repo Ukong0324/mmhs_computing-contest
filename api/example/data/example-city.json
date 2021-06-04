@@ -1,0 +1,219 @@
+{
+    "seoul": {
+        "today": {
+            "total": "206",
+            "domestic": "205",
+            "foreign": "1"
+        },
+        "total": "44,743",
+        "care": "2,753",
+        "recover": "41,494",
+        "death": "496",
+        "incidence": "459.68"
+    },
+    "busan": {
+        "today": {
+            "total": "14",
+            "domestic": "13",
+            "foreign": "1"
+        },
+        "total": "5,763",
+        "care": "227",
+        "recover": "5,412",
+        "death": "124",
+        "incidence": "168.91"
+    },
+    "daegu": {
+        "today": {
+            "total": "65",
+            "domestic": "65",
+            "foreign": "0"
+        },
+        "total": "10,136",
+        "care": "401",
+        "recover": "9,513",
+        "death": "222",
+        "incidence": "416.01"
+    },
+    "incheon": {
+        "today": {
+            "total": "10",
+            "domestic": "10",
+            "foreign": "0"
+        },
+        "total": "6,267",
+        "care": "214",
+        "recover": "5,992",
+        "death": "61",
+        "incidence": "212"
+    },
+    "gwangju": {
+        "today": {
+            "total": "7",
+            "domestic": "7",
+            "foreign": "0"
+        },
+        "total": "2,826",
+        "care": "104",
+        "recover": "2,700",
+        "death": "22",
+        "incidence": "194"
+    },
+    "daejeon": {
+        "today": {
+            "total": "18",
+            "domestic": "18",
+            "foreign": "0"
+        },
+        "total": "2,153",
+        "care": "180",
+        "recover": "1,949",
+        "death": "24",
+        "incidence": "146.05"
+    },
+    "ulsan": {
+        "today": {
+            "total": "15",
+            "domestic": "14",
+            "foreign": "1"
+        },
+        "total": "2,617",
+        "care": "92",
+        "recover": "2,485",
+        "death": "40",
+        "incidence": "228.15"
+    },
+    "sejong": {
+        "today": {
+            "total": "3",
+            "domestic": "3",
+            "foreign": "0"
+        },
+        "total": "490",
+        "care": "51",
+        "recover": "438",
+        "death": "1",
+        "incidence": "143.14"
+    },
+    "gyeonggi": {
+        "today": {
+            "total": "209",
+            "domestic": "204",
+            "foreign": "5"
+        },
+        "total": "39,809",
+        "care": "2,077",
+        "recover": "37,093",
+        "death": "639",
+        "incidence": "300.44"
+    },
+    "gangwon": {
+        "today": {
+            "total": "18",
+            "domestic": "18",
+            "foreign": "0"
+        },
+        "total": "3,247",
+        "care": "191",
+        "recover": "3,005",
+        "death": "51",
+        "incidence": "210.77"
+    },
+    "chungbuk": {
+        "today": {
+            "total": "22",
+            "domestic": "21",
+            "foreign": "1"
+        },
+        "total": "2,986",
+        "care": "127",
+        "recover": "2,791",
+        "death": "68",
+        "incidence": "186.7"
+    },
+    "chungnam": {
+        "today": {
+            "total": "9",
+            "domestic": "9",
+            "foreign": "0"
+        },
+        "total": "3,579",
+        "care": "179",
+        "recover": "3,361",
+        "death": "39",
+        "incidence": "168.63"
+    },
+    "jeollabuk": {
+        "today": {
+            "total": "3",
+            "domestic": "3",
+            "foreign": "0"
+        },
+        "total": "2,256",
+        "care": "87",
+        "recover": "2,111",
+        "death": "58",
+        "incidence": "124.14"
+    },
+    "jeollanam": {
+        "today": {
+            "total": "12",
+            "domestic": "12",
+            "foreign": "0"
+        },
+        "total": "1,493",
+        "care": "132",
+        "recover": "1,346",
+        "death": "15",
+        "incidence": "80.07"
+    },
+    "gyeongbuk": {
+        "today": {
+            "total": "11",
+            "domestic": "8",
+            "foreign": "3"
+        },
+        "total": "4,735",
+        "care": "189",
+        "recover": "4,461",
+        "death": "85",
+        "incidence": "177.84"
+    },
+    "gyeongnam": {
+        "today": {
+            "total": "44",
+            "domestic": "43",
+            "foreign": "1"
+        },
+        "total": "4,795",
+        "care": "209",
+        "recover": "4,567",
+        "death": "19",
+        "incidence": "142.65"
+    },
+    "jeju": {
+        "today": {
+            "total": "21",
+            "domestic": "21",
+            "foreign": "0"
+        },
+        "total": "1,089",
+        "care": "140",
+        "recover": "948",
+        "death": "1",
+        "incidence": "162.36"
+    },
+    "quarantine": {
+        "today": {
+            "total": "8",
+            "domestic": "0",
+            "foreign": "8"
+        },
+        "total": "3,868",
+        "care": "241",
+        "recover": "3,623",
+        "death": "4",
+        "incidence": "-"
+    },
+    "updated": "2021.06.04 PM 01.21.30"
+}
