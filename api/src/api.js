@@ -6,7 +6,7 @@ const app = express();
 // const https = require("https");
 // const fs = require("fs");
 // const path = require("path");
-const settings = require("../settings.js");
+const settings = require("../config.js");
 
 
 // const sslServer = https.createServer({

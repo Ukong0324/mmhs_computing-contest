@@ -1,5 +1,5 @@
 const schedule = require('node-schedule');
-const settings = require("../settings.js")
+const settings = require("../config.js")
 const cheerio = require('cheerio');
 const mongoose = require("mongoose")
 const chalk = require('chalk')
