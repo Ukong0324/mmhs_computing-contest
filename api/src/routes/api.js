@@ -46,4 +46,9 @@ router.get("/social_distancing", (req, res) => {
         res.send(resp.social_distancing)
     })
 })
+router.get("/city", (req, res) => {
+    db.collection('coronas').findOne({ _id: "korea" }, async (err, resp) => {
+        res.send(resp.city)
+    })
+})
 module.exports = router
