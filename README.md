@@ -20,11 +20,16 @@ Name | Version | Verified
 Name | Version | Verified
 ------- | -------- | --------
 [Visual Studio Code](https://code.visualstudio.com/) | v1.56.2 | ✔️ (Code Editor)
-[MongoDB Compass](https://www.mongodb.com/products/compass) | v1.26.1.0 | ✔️ (Explore and Manipulate)
+[MongoDB Compass](https://www.mongodb.com/products/compass) | v1.26.1.0 | ✔️ (Database Explore and Manipulate)
+[Postman](https://www.postman.com/) | v8.5.1 | (API Request)
 [Git](https://git-scm.com/) | v2.31.1 | ✔️ (Github)
 
 ## **Setup**
 
+
+
 ## **Contact**
+
++ Email: ukong@kakao.com
 
 -------------------------------------
