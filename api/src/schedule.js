@@ -122,15 +122,81 @@ function ageUpdate() {
   axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
     const $ = cheerio.load(res.data);
 
-    let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(2) > span:nth-child(1)").text()
-    let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1)").text()
-    let twenty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(2) > span:nth-child(1)").text()
-    let thirty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(2) > span:nth-child(1)").text()
-    let forty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(2) > span:nth-child(1)").text()
-    let fifty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(2) > span:nth-child(1)").text()
-    let sixty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span:nth-child(1)").text()
-    let seventy = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span:nth-child(1)").text()
-    let eighty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span:nth-child(1)").text()
+    let zero_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(2) > span:nth-child(1)").text()
+    let ten_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(2) > span:nth-child(1)").text()
+    let twenty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(2) > span:nth-child(1)").text()
+    let thirty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(2) > span:nth-child(1)").text()
+    let forty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(2) > span:nth-child(1)").text()
+    let fifty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(2) > span:nth-child(1)").text()
+    let sixty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span:nth-child(1)").text()
+    let seventy_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span:nth-child(1)").text()
+    let eighty_total = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span:nth-child(1)").text()
+
+    let zero_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(3) > span:nth-child(1)").text()
+    let ten_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(3) > span:nth-child(1)").text()
+    let twenty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(3) > span:nth-child(1)").text()
+    let thirty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(3) > span:nth-child(1)").text()
+    let forty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(3) > span:nth-child(1)").text()
+    let fifty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(3) > span:nth-child(1)").text()
+    let sixty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(3) > span:nth-child(1)").text()
+    let seventy_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(3) > span:nth-child(1)").text()
+    let eighty_dead = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(3) > span:nth-child(1)").text()
+
+    let zero_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let ten_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let twenty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let thirty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let forty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let fifty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let sixty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let seventy_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+    let eighty_critical = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
+
+    const zero = {
+      total: zero_total,
+      dead: zero_dead,
+      critical: zero_critical
+    }
+    const ten = {
+      total: ten_total,
+      dead: ten_dead,
+      critical: ten_critical
+    }
+    const twenty = {
+      total: twenty_total,
+      dead: twenty_dead,
+      critical: twenty_critical
+    }
+    const thirty = {
+      total: thirty_total,
+      dead: thirty_dead,
+      critical: thirty_critical
+    }
+    const forty = {
+      total: forty_total,
+      dead: forty_dead,
+      critical: forty_critical
+    }
+    const fifty = {
+      total: fifty_total,
+      dead: fifty_dead,
+      critical: fifty_critical
+    }
+    const sixty = {
+      total: sixty_total,
+      dead: sixty_dead,
+      critical: sixty_critical
+    }
+    const seventy = {
+      total: seventy_total,
+      dead: seventy_dead,
+      critical: seventy_critical
+    }
+    const eighty = {
+      total: eighty_total,
+      dead: eighty_dead,
+      critical: eighty_critical
+    }
 
     try {
       db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
@@ -148,53 +214,6 @@ function ageUpdate() {
             updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
           }
         }
-      }).then(() => {
-
-        const line_chart = ChartJSImage().chart({
-          "type": "line",
-          "data": {
-            "labels": [
-              "0-9",
-              "10-19",
-              "20-29",
-              "30-39",
-              "40-49",
-              "50-59",
-              "60-69",
-              "70-79",
-              "80+"
-            ],
-            "datasets": [
-              {
-                "label": "감염자",
-                "borderColor": "rgb(255,+99,+132)",
-                "backgroundColor": "rgba(255,+99,+132,+.5)",
-                "data": [
-                  zero.replace(",", ""),
-                  ten.replace(",", ""),
-                  twenty.replace(",", ""),
-                  thirty.replace(",", ""),
-                  forty.replace(",", ""),
-                  fifty.replace(",", ""),
-                  sixty.replace(",", ""),
-                  seventy.replace(",", ""),
-                  eighty.replace(",", ""),
-                ]
-              }
-            ]
-          },
-          "options": {
-            "title": {
-              "display": true,
-              "text": "코로나19 연령별 감염자 현황"
-            }
-          }
-        })
-          .backgroundColor('white')
-          .width(700)
-          .height(450);
-
-        line_chart.toFile('../example/age.png');
       })
     } catch (e) {
       console.log(e)
@@ -203,173 +222,6 @@ function ageUpdate() {
   })
 }
 
-function age_dead_Update() {
-  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
-    const $ = cheerio.load(res.data);
-
-    let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(3) > span:nth-child(1)").text()
-    let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(3) > span:nth-child(1)").text()
-    let twenty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(3) > span:nth-child(1)").text()
-    let thirty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(3) > span:nth-child(1)").text()
-    let forty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(3) > span:nth-child(1)").text()
-    let fifty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(3) > span:nth-child(1)").text()
-    let sixty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(3) > span:nth-child(1)").text()
-    let seventy = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(3) > span:nth-child(1)").text()
-    let eighty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(3) > span:nth-child(1)").text()
-    try {
-      db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
-        $set: {
-          age_dead: {
-            zero: zero,
-            ten: ten,
-            twenty: twenty,
-            thirty: thirty,
-            forty: forty,
-            fifty: fifty,
-            sixty: sixty,
-            seventy: seventy,
-            eighty: eighty,
-            updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
-          }
-        }
-      }).then(() => {
-        const line_chart = ChartJSImage().chart({
-          "type": "line",
-          "data": {
-            "labels": [
-              "0-9",
-              "10-19",
-              "20-29",
-              "30-39",
-              "40-49",
-              "50-59",
-              "60-69",
-              "70-79",
-              "80+"
-            ],
-            "datasets": [
-              {
-                "label": "사망자",
-                "borderColor": "rgb(255,+99,+132)",
-                "backgroundColor": "rgba(255,+99,+132,+.5)",
-                "data": [
-                  zero.replace(",", ""),
-                  ten.replace(",", ""),
-                  twenty.replace(",", ""),
-                  thirty.replace(",", ""),
-                  forty.replace(",", ""),
-                  fifty.replace(",", ""),
-                  sixty.replace(",", ""),
-                  seventy.replace(",", ""),
-                  eighty.replace(",", ""),
-                ]
-              }
-            ]
-          },
-          "options": {
-            "title": {
-              "display": true,
-              "text": "코로나19 연령별 사망자 현황"
-            }
-          }
-        })
-          .backgroundColor('white')
-          .width(700)
-          .height(450);
-
-        line_chart.toFile('../example/age_dead.png');
-      })
-    } catch (e) {
-      console.log(e)
-    }
-
-  })
-
-}
-
-function age_critical_Update() {
-  axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
-    const $ = cheerio.load(res.data);
-
-    let zero = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(9) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let ten = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(8) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let twenty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(7) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let thirty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(6) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let forty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(5) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let fifty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(4) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let sixty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(3) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let seventy = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(2) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    let eighty = $("#content > div > div:nth-child(25) > table > tbody > tr:nth-child(1) > td:nth-child(4) > span:nth-child(1)").text().replace("-", 0)
-    try {
-      db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
-        $set: {
-          age_critical: {
-            zero: zero,
-            ten: ten,
-            twenty: twenty,
-            thirty: thirty,
-            forty: forty,
-            fifty: fifty,
-            sixty: sixty,
-            seventy: seventy,
-            eighty: eighty,
-            updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
-          }
-        }
-      }).then(() => {
-        const line_chart = ChartJSImage().chart({
-          "type": "line",
-          "data": {
-            "labels": [
-              "0-9",
-              "10-19",
-              "20-29",
-              "30-39",
-              "40-49",
-              "50-59",
-              "60-69",
-              "70-79",
-              "80+"
-            ],
-            "datasets": [
-              {
-                "label": "치명률",
-                "borderColor": "rgb(255,+99,+132)",
-                "backgroundColor": "rgba(255,+99,+132,+.5)",
-                "data": [
-                  zero.replace(",", ""),
-                  ten.replace(",", ""),
-                  twenty.replace(",", ""),
-                  thirty.replace(",", ""),
-                  forty.replace(",", ""),
-                  fifty.replace(",", ""),
-                  sixty.replace(",", ""),
-                  seventy.replace(",", ""),
-                  eighty.replace(",", ""),
-                ]
-              }
-            ]
-          },
-          "options": {
-            "title": {
-              "display": true,
-              "text": "코로나19 연령별 치명률 현황"
-            }
-          }
-        })
-          .backgroundColor('white')
-          .width(700)
-          .height(450);
-
-        line_chart.toFile('../example/age_critical.png');
-      })
-
-    } catch (e) {
-      console.log(e)
-    }
-
-  })
-}
 /**
  * 코로나19 확진자 성별 현황
  */
@@ -1228,3 +1080,4 @@ const covid = schedule.scheduleJob('00 50 9 * * *', function () {
   })
 });
 
+ageUpdate()
