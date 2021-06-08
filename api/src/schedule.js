@@ -510,106 +510,174 @@ function vaccine_Update() {
     let second_today_jeju_total = $("#wrap > div.container > div:nth-child(1) > div:nth-child(5) > table > tbody > tr:nth-child(18) > td:nth-child(5)").text()
 
     const seoul = {
-      first_today_result: first_today_seoul_result,
-      first_today_total: first_today_seoul_total,
-      second_today_result: second_today_seoul_result,
-      second_today_total: second_today_seoul_total
+      first: {
+        today_result: first_today_seoul_result,
+        today_total: first_today_seoul_total
+      },
+      second: {
+        today_result: second_today_seoul_result,
+        today_total: second_today_seoul_total
+      }
     }
     const busan = {
-      first_today_result: first_today_busan_result,
-      first_today_total: first_today_busan_total,
-      second_today_result: second_today_busan_result,
-      second_today_total: second_today_busan_total
+      first: {
+        today_result: first_today_busan_result,
+        today_total: first_today_busan_total
+      },
+      second: {
+        today_result: second_today_busan_result,
+        today_total: second_today_busan_total
+      }
     }
     const daegu = {
-      first_today_result: first_today_daegu_result,
-      first_today_total: first_today_daegu_total,
-      second_today_result: second_today_daegu_result,
-      second_today_total: second_today_daegu_total
+      first: {
+        today_result: first_today_daegu_result,
+        today_total: first_today_daegu_total
+      },
+      second: {
+        today_result: second_today_daegu_result,
+        today_total: second_today_daegu_total
+      }
     }
     const incheon = {
-      first_today_result: first_today_incheon_result,
-      first_today_total: first_today_incheon_total,
-      second_today_result: second_today_incheon_result,
-      second_today_total: second_today_incheon_total
+      first: {
+        today_result: first_today_incheon_result,
+        today_total: first_today_incheon_total
+      },
+      second: {
+        today_result: second_today_incheon_result,
+        today_total: second_today_incheon_total
+      }
     }
     const gwangju = {
-      first_today_result: first_today_gwangju_result,
-      first_today_total: first_today_gwangju_total,
-      second_today_result: second_today_gwangju_result,
-      second_today_total: second_today_gwangju_total
+      first: {
+        today_result: first_today_gwangju_result,
+        today_total: first_today_gwangju_total
+      },
+      second: {
+        today_result: second_today_gwangju_result,
+        today_total: second_today_gwangju_total
+      }
     }
     const daejeon = {
-      first_today_result: first_today_daejeon_result,
-      first_today_total: first_today_daejeon_total,
-      second_today_result: second_today_daejeon_result,
-      second_today_total: second_today_daejeon_total
+      first: {
+        today_result: first_today_daejeon_result,
+        today_total: first_today_daejeon_total
+      },
+      second: {
+        today_result: second_today_daejeon_result,
+        today_total: second_today_daejeon_total
+      }
     }
     const ulsan = {
-      first_today_result: first_today_ulsan_result,
-      first_today_total: first_today_ulsan_total,
-      second_today_result: second_today_ulsan_result,
-      second_today_total: second_today_ulsan_total
+      first: {
+        today_result: first_today_ulsan_result,
+        today_total: first_today_ulsan_total
+      },
+      second: {
+        today_result: second_today_ulsan_result,
+        today_total: second_today_ulsan_total
+      }
     }
     const sejong = {
-      first_today_result: first_today_sejong_result,
-      first_today_total: first_today_sejong_total,
-      second_today_result: second_today_sejong_result,
-      second_today_total: second_today_sejong_total
+      first: {
+        today_result: first_today_sejong_result,
+        today_total: first_today_sejong_total
+      },
+      second: {
+        today_result: second_today_sejong_result,
+        today_total: second_today_sejong_total
+      }
     }
     const gyeonggi = {
-      first_today_result: first_today_gyeonggi_result,
-      first_today_total: first_today_gyeonggi_total,
-      second_today_result: second_today_gyeonggi_result,
-      second_today_total: second_today_gyeonggi_total
+      first: {
+        today_result: first_today_gyeonggi_result,
+        today_total: first_today_gyeonggi_total
+      },
+      second: {
+        today_result: second_today_gyeonggi_result,
+        today_total: second_today_gyeonggi_total
+      }
     }
     const gangwon = {
-      first_today_result: first_today_gangwon_result,
-      first_today_total: first_today_gangwon_total,
-      second_today_result: second_today_gangwon_result,
-      second_today_total: second_today_gangwon_total
+      first: {
+        today_result: first_today_gangwon_result,
+        today_total: first_today_gangwon_total
+      },
+      second: {
+        today_result: second_today_gangwon_result,
+        today_total: second_today_gangwon_total
+      }
     }
     const chungbuk = {
-      first_today_result: first_today_chungbuk_result,
-      first_today_total: first_today_chungbuk_total,
-      second_today_result: second_today_chungbuk_result,
-      second_today_total: second_today_chungbuk_total
+      first: {
+        today_result: first_today_chungbuk_result,
+        today_total: first_today_chungbuk_total
+      },
+      second: {
+        today_result: second_today_chungbuk_result,
+        today_total: second_today_chungbuk_total
+      }
     }
     const chungnam = {
-      first_today_result: first_today_chungnam_result,
-      first_today_total: first_today_chungnam_total,
-      second_today_result: second_today_chungnam_result,
-      second_today_total: second_today_chungnam_total
+      first: {
+        today_result: first_today_chungnam_result,
+        today_total: first_today_chungnam_total
+      },
+      second: {
+        today_result: second_today_chungnam_result,
+        today_total: second_today_chungnam_total
+      }
     }
     const jeollabuk = {
-      first_today_result: first_today_jeollabuk_result,
-      first_today_total: first_today_jeollabuk_total,
-      second_today_result: second_today_jeollabuk_result,
-      second_today_total: second_today_jeollabuk_total
+      first: {
+        today_result: first_today_jeollabuk_result,
+        today_total: first_today_jeollabuk_total
+      },
+      second: {
+        today_result: second_today_jeollabuk_result,
+        today_total: second_today_jeollabuk_total
+      }
     }
     const jeollanam = {
-      first_today_result: first_today_jeollanam_result,
-      first_today_total: first_today_jeollanam_total,
-      second_today_result: second_today_jeollanam_result,
-      second_today_total: second_today_jeollanam_total
+      first: {
+        today_result: first_today_jeollanam_result,
+        today_total: first_today_jeollanam_total
+      },
+      second: {
+        today_result: second_today_jeollanam_result,
+        today_total: second_today_jeollanam_total
+      }
     }
     const gyeongbuk = {
-      first_today_result: first_today_gyeongbuk_result,
-      first_today_total: first_today_gyeongbuk_total,
-      second_today_result: second_today_gyeongbuk_result,
-      second_today_total: second_today_gyeongbuk_total
+      first: {
+        today_result: first_today_gyeongbuk_result,
+        today_total: first_today_gyeongbuk_total
+      },
+      second: {
+        today_result: second_today_gyeongbuk_result,
+        today_total: second_today_gyeongbuk_total
+      }
     }
     const gyeongnam = {
-      first_today_result: first_today_gyeongnam_result,
-      first_today_total: first_today_gyeongnam_total,
-      second_today_result: second_today_gyeongnam_result,
-      second_today_total: second_today_gyeongnam_total
+      first: {
+        today_result: first_today_gyeongnam_result,
+        today_total: first_today_gyeongnam_total
+      },
+      second: {
+        today_result: second_today_gyeongnam_result,
+        today_total: second_today_gyeongnam_total
+      }
     }
     const jeju = {
-      first_today_result: first_today_jeju_result,
-      first_today_total: first_today_jeju_total,
-      second_today_result: second_today_jeju_result,
-      second_today_total: second_today_jeju_total
+      first: {
+        today_result: first_today_jeju_result,
+        today_total: first_today_jeju_total
+      },
+      second: {
+        today_result: second_today_jeju_result,
+        today_total: second_today_jeju_total
+      }
     }
     db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
       $set: {
@@ -699,6 +767,9 @@ function social_distancing_Update() {
   })
 }
 
+/**
+ * 코로나19 시도별 발생동향
+ */
 function city_Update() {
   const cheerio = require('cheerio');
   const axios = require("axios")
@@ -1155,3 +1226,4 @@ const covid = schedule.scheduleJob('00 50 9 * * *', function () {
     console.log(err)
   })
 });
+
