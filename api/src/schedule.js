@@ -237,16 +237,23 @@ function gender_Update() {
 
     let man_critical = $("#content > div > div:nth-child(22) > table > tbody > tr:nth-child(1) > td:nth-child(4) > span").text()
     let women_critical = $("#content > div > div:nth-child(22) > table > tbody > tr:nth-child(2) > td:nth-child(4) > span").text()
+
+    const man ={
+      total: man_total,
+      dead: man_dead,
+      critical: man_critical
+    }
+    const women ={
+      total: women_total,
+      dead: women_dead,
+      critical: women_critical
+    }
     try {
       db.collection('coronas').findOneAndUpdate({ _id: "korea" }, {
         $set: {
           gender: {
-            man_total: man_total,
-            women_total: women_total,
-            man_dead: man_dead,
-            women_dead: women_dead,
-            man_critical: man_critical,
-            women_critical: women_critical,
+            man: man,
+            women: women,
             updated: moment(Date.now()).format("YYYY.MM.DD A hh.mm.ss")
           }
         }
@@ -1079,4 +1086,3 @@ const covid = schedule.scheduleJob('00 50 9 * * *', function () {
     console.log(err)
   })
 });
-
