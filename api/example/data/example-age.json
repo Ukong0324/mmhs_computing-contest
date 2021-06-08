@@ -1,12 +1,50 @@
 {
-    "zero": "6,181",
-    "ten": "9,973",
-    "twenty": "20,992",
-    "thirty": "19,200",
-    "forty": "21,073",
-    "fifty": "25,747",
-    "sixty": "21,238",
-    "seventy": "9,784",
-    "eighty": "5,722",
-    "updated": "2021.05.31 AM 10.00.00"
+    "age": {
+        "zero": {
+            "total": "6,436",
+            "dead": "0",
+            "critical": "0"
+        },
+        "ten": {
+            "total": "10,388",
+            "dead": "0",
+            "critical": "0"
+        },
+        "twenty": {
+            "total": "21,888",
+            "dead": "3",
+            "critical": "0.01"
+        },
+        "thirty": {
+            "total": "20,043",
+            "dead": "8",
+            "critical": "0.04"
+        },
+        "forty": {
+            "total": "21,989",
+            "dead": "15",
+            "critical": "0.07"
+        },
+        "fifty": {
+            "total": "26,691",
+            "dead": "71",
+            "critical": "0.27"
+        },
+        "sixty": {
+            "total": "21,874",
+            "dead": "231",
+            "critical": "1.06"
+        },
+        "seventy": {
+            "total": "9,986",
+            "dead": "558",
+            "critical": "5.59"
+        },
+        "eighty": {
+            "total": "5,796",
+            "dead": "1,089",
+            "critical": "18.79"
+        },
+        "updated": "2021.06.08 PM 08.50.42"
+    }
 }
