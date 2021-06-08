@@ -3,16 +3,7 @@ const chalk = require("chalk");
 const mongoose = require("mongoose");
 const api = require("./routes/api.js");
 const app = express();
-// const https = require("https");
-// const fs = require("fs");
-// const path = require("path");
 const settings = require("../config.js");
-
-
-// const sslServer = https.createServer({
-//     key: fs.readFileSync(path.join(__dirname, 'cert', '../../ssl/key.pem')),
-//     cert: fs.readFileSync(path.join(__dirname, 'cert', '../../ssl/cert.pem'))
-// }, app)
 
 app.get("/", (req, res) => {
     res.redirect("https://github.com/Ukong0324/mmhs_computing-contest")
