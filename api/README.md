@@ -69,7 +69,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.50.00
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 
-## 3. 코로나19 성별 코로나 현황  
+## 3. 코로나19 성별 현황  
 
 + 제공하는 데이터는 아래와 같습니다.   
     +  0~80대 이상, 연령별 사망자 수의 데이터
