@@ -1,9 +1,15 @@
 {
-    "man_total": "70,002",
-    "women_total": "69,908",
-    "man_dead": "970",
-    "women_dead": "987",
-    "man_critical": "1.39",
-    "women_critical": "1.41",
-    "updated": "2021.05.31 AM 10.00.00"
+    "gender": {
+        "man": {
+            "total": "72,759",
+            "dead": "978",
+            "critical": "1.34"
+        },
+        "women": {
+            "total": "72,332",
+            "dead": "997",
+            "critical": "1.38"
+        },
+        "updated": "2021.06.08 PM 09.09.01"
+    }
 }
