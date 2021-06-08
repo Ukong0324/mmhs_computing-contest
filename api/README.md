@@ -201,8 +201,6 @@ updated | 업데이트 날짜 | 2021.05.31 AM 09.50.00
 
 ### 2. 응답 내용 (Output)
 
-- 아래의 예시 응답 내용의 데이터는 서울 입니다.
-
 항목명(영어) | 비고 | 데이터 (예시)
 ------- | -------- | --------
 seoul | 서울 | 2
@@ -225,4 +223,36 @@ jeju | 제주 | 2
 updated | 업데이트 날짜 | 2021.05.31 AM 09.50.00
 
 
-> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시오.
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시오.   
+
+## 8. 코로나19 시도별 발생동향  
+
++ 제공하는 데이터는 아래와 같습니다.   
+    +  전일대비 (합계, 국내 발생, 해외유입), 확진환자, 격리중, 격리해제, 사망자, [발생률]
+
+* 데이터 정보 출처: [MOHW](http://ncov.mohw.go.kr/)   
+* 제공하는 데이터들은 오전 9시 50분에 자동 업데이트 됩니다.   
+* 데이터의 기준은 당일 기준 0시 (오전 12시) 입니다.
+* [발생률]은 인구 10만 명당 (지역별 인구 출처 : 행정안전부, 주민등록인구현황 (20.1월 기준))
+
+
+### 1. 요청 방법 (GET)
+* https://corona-api.xyz/api/city
+
+### 2. 응답 내용 (Output)
+
+- 아래의 예시 응답 내용의 데이터는 서울 입니다.
+
+항목명(영어) | 비고 | 데이터 (예시)
+------- | -------- | --------
+today > total | 전일대비 증감 | 139
+today > domestic | 전일대비 국내 증감 | 139
+today > foreign | 전일대비 해외유입 증감 | 0
+total | 총합 확진환자 | 45,497
+care | 격리 중 | 7,704
+recover | 격리 해제 | 135,142
+death | 사망자 | 1,945
+incidence | 발생률 | 467.43
+updated | 업데이트 날짜 | 2021.06.08 AM 09.50.00
+
+> [COVID19-city](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-city.json) 데이터를 확인하여 제공 방식을 참고하십시오.
