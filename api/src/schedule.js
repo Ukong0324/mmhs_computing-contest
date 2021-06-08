@@ -1080,4 +1080,3 @@ const covid = schedule.scheduleJob('00 50 9 * * *', function () {
   })
 });
 
-ageUpdate()
