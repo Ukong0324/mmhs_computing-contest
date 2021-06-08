@@ -69,7 +69,7 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.50.00
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-age](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-age.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
 
-## 5. 코로나19 성별 코로나 현황  
+## 3. 코로나19 성별 코로나 현황  
 
 + 제공하는 데이터는 아래와 같습니다.   
     +  0~80대 이상, 연령별 사망자 수의 데이터
@@ -85,15 +85,16 @@ updated | 해당 데이터 업데이트 날짜 | 2021.05.31 AM 09.50.00
 
 항목명(영어) | 비고 | 데이터 (예시)
 ------- | -------- | --------
-man_total | 남성 확진자 수  | 70,002
-women_total | 여성 확진자 수  | 69,908 
-man_dead | 남성 사망자 수 | 970
-women_dead | 여성 사망자 수 | 987
-man_critical | 남성 치명률  | 1.39
-women_critical | 여성 치명률  | 1.41
+man > total | 남성 확진자 수  | 70,002
+man > dead | 남성 사망자 수 | 970
+man > critical | 남성 치명률  | 1.39
+women > total | 여성 확진자 수  | 69,908 
+women > dead | 여성 사망자 수 | 987
+women > critical | 여성 치명률  | 1.41
 updated | 업데이트 날짜  | 2021.05.31 AM 09.50.00
 
-## 6. 코로나19 시도별 백신 접종 현황
+> 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-gender](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-gender.json) 데이터를 확인하여 제공 방식을 참고하십시오.
+## 4. 코로나19 시도별 백신 접종 현황
 
 + 제공하는 데이터는 아래와 같습니다.   
     +  당일 전국 누적, 실적 데이터
@@ -120,7 +121,7 @@ updated | 업데이트 날짜 | 2021.05.31 AM 09.50.00
 
 > [COVID19-vaccine](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-vaccine.json) 데이터를 확인하여 제공 방식을 참고하십시오.
 
-## 7. 코로나19 시도별 사회적 거리두기
+## 5. 코로나19 시도별 사회적 거리두기
 
 + 제공하는 데이터는 아래와 같습니다.   
     + 시도별 사회적 거리두기 단계 데이터
@@ -159,7 +160,7 @@ updated | 업데이트 날짜 | 2021.05.31 AM 09.50.00
 
 > 제공하는 데이터의 방식을 확인하고 싶으시다면 [COVID19-social_distancing](https://github.com/Ukong0324/mmhs_computing-contest/blob/main/api/example/data/example-social_distancing.json) 데이터를 확인하여 제공 방식을 참고하십시오.   
 
-## 8. 코로나19 시도별 발생동향  
+## 6. 코로나19 시도별 발생동향  
 
 + 제공하는 데이터는 아래와 같습니다.   
     +  전일대비 (합계, 국내 발생, 해외유입), 확진환자, 격리중, 격리해제, 사망자, [발생률]
