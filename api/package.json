@@ -1,6 +1,6 @@
 {
   "name": "corona-19",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "2021 창의컴퓨팅대회",
   "main": "api.js",
   "directories": {
@@ -15,9 +15,8 @@
     "express": "^4.17.1",
     "luxon": "^1.27.0",
     "moment": "^2.29.1",
-    "mongoose": "^5.12.11",
+    "mongoose": "^5.12.13",
     "node-schedule": "^2.0.0",
-    "request": "^2.88.2",
     "webhook-discord": "^3.7.7"
   },
   "devDependencies": {},
