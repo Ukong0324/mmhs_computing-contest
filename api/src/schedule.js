@@ -406,6 +406,7 @@ function gender_Update() {
   })
 }
 
+
 /**
  * 코로나19 시도별 접종 현황 
  */
