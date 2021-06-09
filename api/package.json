@@ -1,6 +1,6 @@
 {
   "name": "corona-19",
-  "version": "1.0.2",
+  "version": "1.0.2 - Fixed",
   "description": "2021 창의컴퓨팅대회",
   "main": "api.js",
   "directories": {
