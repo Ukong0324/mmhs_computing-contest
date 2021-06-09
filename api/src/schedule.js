@@ -1066,9 +1066,6 @@ function city_Update() {
 const covid = schedule.scheduleJob('00 50 9 * * *', function () {
   koreaUpdate()
   ageUpdate()
-  age_dead_Update()
-  age_critical_Update()
-  age_critical_Update()
   gender_Update()
   vaccine_Update()
   social_distancing_Update()
