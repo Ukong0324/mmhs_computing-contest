@@ -118,6 +118,9 @@ function koreaUpdate() {
   })
 }
 
+/**
+ * 코로나19 연령별 현황
+ */
 function ageUpdate() {
   axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
     const $ = cheerio.load(res.data);
@@ -223,7 +226,7 @@ function ageUpdate() {
 }
 
 /**
- * 코로나19 확진자 성별 현황
+ * 코로나19 성별 현황
  */
 function gender_Update() {
   axios.get("http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=").then((res) => {
