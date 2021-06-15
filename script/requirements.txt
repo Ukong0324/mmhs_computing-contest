@@ -1,0 +1,10 @@
+###### Requirements without Version Specifiers ######
+requests
+matplotlib
+
+"""
+0. open the terminal on this tree
+1. the following command will install the packages according to the configuration file
+   $ pip install -r requirements.txt
+2. done.
+"""
